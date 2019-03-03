@@ -17,6 +17,22 @@
 //= require semantic-ui
 //= require_tree .
 
+const scroll_bottom = () => {
+
+  let objDiv = document.getElementById("messages");
+  objDiv.scrollTop = objDiv.scrollHeight;
+}
+
+
+// const submit_message = (e) => {
+
+    //   var key = e.which;
+    //   if (key == 13) { // the enter key code
+    //     $('.input button').click();
+    //     return false;
+    //   };
+    // };
+
 
 $(document).on("turbolinks:load", function() {
   //this drop down relevant to semantic-ui drop down menu
@@ -27,5 +43,5 @@ $(document).on("turbolinks:load", function() {
     $(this).closest('.message').transition('fade');
   });
 
-
+  scroll_bottom();
 })
