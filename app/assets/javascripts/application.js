@@ -19,5 +19,13 @@
 
 
 $(document).on("turbolinks:load", function() {
+  //this drop down relevant to semantic-ui drop down menu
   $('.ui.dropdown').dropdown();
+
+  //related to semantic-ui API for closing x on notifications
+  $('.message .close').on('click', function() {
+    $(this).closest('.message').transition('fade');
+  });
+
+
 })
