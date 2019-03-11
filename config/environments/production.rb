@@ -92,5 +92,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   # config.action_cable.allowed_request_origins = ['https://ruby2-6-gbmatrix.c9users.io/'] # address needs to be changed to production
-
+  
+  #me added
+  config.assets.js_compressor = Uglifier.new(:harmony => true)
 end
